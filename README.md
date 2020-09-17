@@ -4,9 +4,9 @@ These are configuration files for Nginx with some settings to improve aspects su
 
 *Last tested on Nginx 1.18.0 on Ubuntu 20.04.*
 
-# Deployment
+## Deployment
 
-## nginx.conf
+### nginx.conf
 
 Back up the default configuration file:
 
@@ -26,7 +26,7 @@ Reload to apply changes:
 
 `sudo systemctl reload nginx`
 
-## Domain files
+### Domain files
 
 Disable the default file:
 
