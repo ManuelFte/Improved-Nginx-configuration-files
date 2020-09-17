@@ -16,7 +16,7 @@ Recreate it:
 
 `sudo nano /etc/nginx/nginx.conf`
 
-Paste the contents of the improved [nginx.conf](https://raw.githubusercontent.com/ManuelFte/improved-nginx/master/nginx.conf) file from this repository.
+Paste the contents of the improved [nginx.conf](https://raw.githubusercontent.com/ManuelFte/Improved-Nginx-configuration-files/master/nginx.conf) file from this repository.
 
 Test that everything is running well:
 
@@ -32,7 +32,7 @@ Disable the default file:
 
 `sudo rm /etc/nginx/sites-enabled/default`
 
-Open the contents of [example.com.conf](https://raw.githubusercontent.com/ManuelFte/improved-nginx/master/example.com.conf) with a text editor and use CTRL + H to replace all instances of `example.com` with your domain.
+Open the contents of [example.com.conf](https://raw.githubusercontent.com/ManuelFte/Improved-Nginx-configuration-files/master/example.com.conf) with a text editor and use CTRL + H to replace all instances of `example.com` with your domain.
 
 On the server, create a new file for the domain you're going to set up (replacing `example.com` with your domain):
 
