@@ -4,6 +4,15 @@ These are configuration files for Nginx with some settings to improve aspects su
 
 *Last tested on Nginx 1.18.0 on Ubuntu 20.04.*
 
+## Table of Contents
+
+* [Deployment](#deployment)
+  + [nginx.conf](#nginxconf)
+  + [Domain files](#domain-files)
+    - [Prerequisites](#prerequisites)
+    - [Nginx configuration](#nginx-configuration)
+* [Sources](#sources)
+
 ## Deployment
 
 ### nginx.conf
