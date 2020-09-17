@@ -97,3 +97,4 @@ Your website should now be live in your domain.
 * https://medium.com/staqu-dev-logs/optimizations-tuning-nginx-for-better-rps-of-an-http-api-de2a0919744a
 * https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration
 * https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-16-04
+* https://jekyllrb.com/tutorials/custom-404-page/#hosting-on-nginx-server
