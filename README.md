@@ -18,7 +18,7 @@ Recreate it:
 
 Paste the contents of the improved [nginx.conf](https://raw.githubusercontent.com/ManuelFte/Improved-Nginx-configuration-files/master/nginx.conf) file from this repository.
 
-Test that everything is running well:
+Test that the configuration is correct:
 
 `sudo nginx -t`
 
@@ -28,23 +28,42 @@ Reload to apply changes:
 
 ### Domain files
 
+Note: In all the following commands, replace `example.com` with your domain.
+
+#### Prerequisites
+
+This configuration file assumes that your site's files reside in `/var/www/example.com/html`. If this is not the case, do the following:
+
+Create that directory:
+
+`sudo mkdir -p /var/www/example.com/html`
+
+Give it the appropriate permissions:
+
+`sudo chown -R $USER:$USER /var/www/example.com/html`
+`sudo chmod -R 755 /var/www`
+
+Upload your files into that directory.
+
+#### Nginx configuration
+
 Disable the default file:
 
 `sudo rm /etc/nginx/sites-enabled/default`
 
-Open the contents of [example.com.conf](https://raw.githubusercontent.com/ManuelFte/Improved-Nginx-configuration-files/master/example.com.conf) with a text editor and use CTRL + H to replace all instances of `example.com` with your domain.
+Open the contents of [example.com.conf](https://raw.githubusercontent.com/ManuelFte/Improved-Nginx-configuration-files/master/example.com.conf) with a text editor and use `CTRL` + `H` to replace all instances of `example.com` with your domain.
 
-On the server, create a new file for the domain you're going to set up (replacing `example.com` with your domain):
+On the server, create a new file for the domain you're going to set up:
 
 `sudo nano /etc/nginx/sites-available/example.com`
 
-Paste the contents of the previous file there (note that the file in this repository has a `.conf` extension merely for code highlighting purposes, the file in your server must not have this extension).
+Paste the contents of the previous file there (note that the file in this repository has a `.conf` extension merely for code-highlighting purposes, the file in your server must not have this extension).
 
 Enable it:
 
 `sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com`
 
-Test that everything is running well:
+Test that the configuration is correct:
 
 `sudo nginx -t`
 
