@@ -41,6 +41,7 @@ Create that directory:
 Give it the appropriate permissions:
 
 `sudo chown -R $USER:$USER /var/www/example.com/html`
+
 `sudo chmod -R 755 /var/www`
 
 Upload your files into that directory.
