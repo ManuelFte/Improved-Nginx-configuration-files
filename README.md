@@ -1,23 +1,25 @@
-# Improved Nginx configuration files
+# Improved Nginx configuration files <!-- omit in toc --> 
 
 These are configuration files for Nginx with some settings to improve aspects such as performance and security, as well as handling some possible errors. Designed for a setup based on server blocks as seen [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04).
 
 *Last tested on Nginx 1.18.0 on Ubuntu 20.04.*
 
-## Table of Contents
+## Table of contents <!-- omit in toc --> 
 
-* [Deployment](#deployment)
-  + [nginx.conf](#nginxconf)
-  + [Domain files](#domain-files)
+- [Usage](#usage)
+  - [First time only](#first-time-only)
+  - [For every site](#for-every-site)
     - [Prerequisites](#prerequisites)
     - [Nginx configuration](#nginx-configuration)
-* [Sources](#sources)
+- [Sources](#sources)
 
-## Deployment
+## Usage
 
-### nginx.conf
+### First time only
 
-Back up the default configuration file:
+The steps in this section are only done when setting up the server for the first time.
+
+Back up the default `nginx.conf` configuration file:
 
 `sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bck`
 
@@ -35,7 +37,9 @@ Reload to apply changes:
 
 `sudo systemctl reload nginx`
 
-### Domain files
+### For every site
+
+The steps in this section should be done for every site you want to add.
 
 Note: In all the following commands, replace `example.com` with your domain.
 
