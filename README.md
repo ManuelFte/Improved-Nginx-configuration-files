@@ -19,6 +19,10 @@ These are configuration files for Nginx with some settings to improve aspects su
 
 The steps in this section are only done when setting up the server for the first time.
 
+Disable the `default` file:
+
+`sudo rm /etc/nginx/sites-enabled/default`
+
 Back up the default `nginx.conf` configuration file:
 
 `sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bck`
@@ -61,10 +65,6 @@ Upload your files into that directory.
 
 #### Nginx configuration
 
-Disable the default file:
-
-`sudo rm /etc/nginx/sites-enabled/default`
-
 Open the contents of [example.com.conf](https://raw.githubusercontent.com/ManuelFte/Improved-Nginx-configuration-files/master/example.com.conf) with a text editor and use `CTRL` + `H` to replace all instances of `example.com` with your domain.
 
 On the server, create a new file for the domain you're going to set up:
@@ -75,7 +75,7 @@ Paste the contents of the previous file there (note that the file in this reposi
 
 Enable it:
 
-`sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com`
+`sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/`
 
 Test that the configuration is correct:
 
